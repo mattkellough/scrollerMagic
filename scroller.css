@@ -4,6 +4,8 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   text-transform: uppercase;
+  width: 960px;
+  margin: 0 auto;
 }
 
 .one {
@@ -48,7 +50,7 @@ body {
   display: inline-block;
 }
 
-img {
+img#hotline {
   position: relative;
   width: 960px;
   margin: 30px auto 0;
@@ -59,14 +61,12 @@ img {
 nav {
   position: fixed;
   top: 0;
-  width: 100%;
-  background: white;
   z-index: 100;
-}
-
-header {
-  height: 200px;
-  background: gray;
+  background: url('wheelchairjimmy.jpg') center no-repeat;
+  width: 960px;
+  margin: 0 auto;
+  display: block;
+  height: 100px;
 }
 
 header .content {
@@ -127,7 +127,7 @@ footer .content {
   text-align: center;
 }
 
-.bullshit {
+.lorem {
   margin: 50px auto 0;
   width: 960px;
 }
