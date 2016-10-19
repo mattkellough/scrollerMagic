@@ -14,7 +14,7 @@ var controller = new ScrollMagic.Controller();
 var scene = new ScrollMagic.Scene({
   triggerElement: "#pinContainer",
   triggerHook: "onLeave",
-  duration: "340%",
+  duration: "312.5%",
   offset: -85
 })
 .setPin("#pinContainer")
@@ -25,7 +25,7 @@ var scene = new ScrollMagic.Scene({
 new ScrollMagic.Scene({
   triggerElement: "#triggers #t1",
   triggerHook: "onLeave",
-  duration: "100%"
+  duration: "30%"
 })
 .setTween(TweenMax.fromTo("section.panel.one", 1, {
   width: "100%"
@@ -39,7 +39,7 @@ new ScrollMagic.Scene({
 new ScrollMagic.Scene({
   triggerElement: "#triggers #t2",
   triggerHook: "onLeave",
-  duration: "100%"
+  duration: "30%"
 })
 .setTween(new TimelineMax()
 .to("section.panel .additionalContent", 1, {
@@ -60,7 +60,7 @@ new ScrollMagic.Scene({
 new ScrollMagic.Scene({
   triggerElement: "#triggers #t3",
   triggerHook: "onLeave",
-  duration: "100%",
+  duration: "30%",
 })
 .setTween(TweenMax.fromTo("section.panel.three", 1, {
   width: "100%"
