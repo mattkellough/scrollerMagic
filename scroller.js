@@ -1,10 +1,12 @@
-function fadeIn(){
-  TweenMax.fromTo(".lorem.after", 3, {
-    autoAlpha: 0
-  },{
-    autoAlpha: 1
-  })
-}
+// function fadeIn(){
+//   TweenMax.fromTo(".lorem.after", 3,{
+//     autoAlpha: 0
+//   },{
+//     autoAlpha: 1,
+//     yoyo:true,
+//     repeat:-1
+//   })
+// }
 // init
 var controller = new ScrollMagic.Controller();
 
@@ -12,7 +14,7 @@ var controller = new ScrollMagic.Controller();
 var scene = new ScrollMagic.Scene({
   triggerElement: "#pinContainer",
   triggerHook: "onLeave",
-  duration: "300%",
+  duration: "340%",
   offset: -85
 })
 .setPin("#pinContainer")
@@ -58,13 +60,27 @@ new ScrollMagic.Scene({
 new ScrollMagic.Scene({
   triggerElement: "#triggers #t3",
   triggerHook: "onLeave",
-  duration: "100%"
+  duration: "100%",
 })
 .setTween(TweenMax.fromTo("section.panel.three", 1, {
   width: "100%"
 }, {
   width: "0%",
-  ease: Linear.easeNone, onUpdate:fadeIn
+  ease: Linear.easeNone
+}))
+.addIndicators() // add indicators (requires plugin)
+.addTo(controller);
+
+
+new ScrollMagic.Scene({
+  triggerElement: "#triggers #t4",
+  triggerHook: "onLeave",
+  duration: "40%"
+})
+.setTween(TweenMax.fromTo(".lorem.after", 2.5,{
+  autoAlpha: 0
+},{
+  autoAlpha: 1
 }))
 .addIndicators() // add indicators (requires plugin)
 .addTo(controller);
