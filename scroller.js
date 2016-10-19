@@ -1,4 +1,10 @@
-
+function fadeIn(){
+  TweenMax.fromTo(".lorem.after", 3, {
+    autoAlpha: 0
+  },{
+    autoAlpha: 1
+  })
+}
 // init
 var controller = new ScrollMagic.Controller();
 
@@ -19,10 +25,10 @@ new ScrollMagic.Scene({
   triggerHook: "onLeave",
   duration: "100%"
 })
-.setTween(TweenMax.fromTo("section.panel.two", 1, {
-  x: "-100%"
+.setTween(TweenMax.fromTo("section.panel.one", 1, {
+  width: "100%"
 }, {
-  x: "0%",
+  width: "0%",
   ease: Linear.easeNone
 }))
 .addIndicators() // add indicators (requires plugin)
@@ -38,10 +44,10 @@ new ScrollMagic.Scene({
   y: "-100%",
   ease: Linear.easeNone
 }) // scroll Content
-.fromTo("section.panel.three", 1, {
-  x: "100%"
+.fromTo("section.panel.two", 1, {
+  width: "100%"
 }, {
-  x: "0%",
+  width: "0%",
   ease: Linear.easeNone
 }) // in from right
 )
@@ -54,11 +60,11 @@ new ScrollMagic.Scene({
   triggerHook: "onLeave",
   duration: "100%"
 })
-.setTween(TweenMax.fromTo("section.panel.four", 1, {
-  x: "100%"
+.setTween(TweenMax.fromTo("section.panel.three", 1, {
+  width: "100%"
 }, {
-  x: "0%",
-  ease: Linear.easeNone
+  width: "0%",
+  ease: Linear.easeNone, onUpdate:fadeIn
 }))
 .addIndicators() // add indicators (requires plugin)
 .addTo(controller);
