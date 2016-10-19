@@ -29,7 +29,7 @@ body {
   color: white;
 }
 .one h1 {
-  margin-top: 150px;
+  padding-top: 100px;
   display: inline-block;
 }
 .one button {
@@ -46,14 +46,24 @@ body {
   display: inline-block;
 }
 
-.three {
+.three  {
   background-color: green;
   color: white;
+}
+
+.three h1 {
+  padding-top: 100px;
+  display: inline-block;
 }
 
 .four {
   background-color: purple;
   color: #FFF;
+}
+
+.four h1 {
+  padding-top: 100px;
+  display: inline-block;
 }
 
 .bullshit {

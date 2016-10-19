@@ -1,8 +1,6 @@
 // init controller
 var controller = new ScrollMagic.Controller();
 
-var controller = new ScrollMagic.Controller();
-
 // define movement of panels
 var wipeAnimation = new TimelineMax()
 .to("#slideContainer", 1,   {x: "-75%"})
